@@ -18,7 +18,7 @@ ResetPassword is a Django-based web application that provides user authenticatio
 
 ## Installation
 
-1. **Clone the repository**:
+1. **Clone the Repository:**
+
    ```bash
-   git clone <repository-url>
-   cd Resetpassword
+   git clone https://github.com/Kunalkrsingh-10/Reset_password.git
