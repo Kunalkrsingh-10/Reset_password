@@ -8,7 +8,7 @@ ResetPassword is a Django-based web application that provides user authenticatio
 - Secure login functionality
 - Password reset functionality
 - User authentication and authorization
-- Responsive design using Tailwind CSS
+- Responsive design using CSS and bootstrap 
 
 ## Technologies Used
 - **Backend**: Django (version 5.1.1)
