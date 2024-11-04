@@ -12,12 +12,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv 
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-STATICFILES_DIR = os.path.join(BASE_DIR, 'static')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-ll*-@ir=f19g0_5j5f(mo0-%^8z=l-bd)!g2mv!p88zzoz&gw!"
@@ -55,7 +55,7 @@ ROOT_URLCONF = "Resetpassword.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "DIRS": [os.path.join(BASE_DIR,"Resetpassword", "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -117,8 +117,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "Resetpassword", "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+mail =os.environ.get("MAIL")
+mail_pass= os.environ.get("MAIL_PASS")
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = mail
+EMAIL_HOST_PASSWORD = mail_pass
+DEFAULT_FROM_EMAIL= mail
+EMAIL_SUBJECT_PREFIX = "Password recovery"
+
+LOGOUT_REDIRECT_URL="/"
+LOGIN_REDIRECT_URL="/"

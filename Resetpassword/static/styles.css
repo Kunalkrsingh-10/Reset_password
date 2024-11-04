@@ -3,14 +3,16 @@ html{
     font-family : sans-serif;
 }
 body {
-    background: linear-gradient(bottom , transparent , rgb(137, 58, 146));
+    background-image: url( https://www.pexels.com/photo/green-leaf-1353938/);
+    background-size: cover;
     display:flex;
     align-items: center;
     justify-content: center;
+    height:100vh;
 
 }
 form{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 5%;
     padding : 10px;
     font-weight: 800;
@@ -53,4 +55,4 @@ form .errorlist li{
     form {
         width: 90%; 
     }
-}
+} 
