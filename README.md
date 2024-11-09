@@ -1,7 +1,7 @@
 # ResetPassword Project
 
 ## Overview
-ResetPassword is a Django-based web application that provides user authentication features, including login and registration functionalities. The project is designed to help users securely manage their accounts and reset their passwords.
+ResetPassword is a Django-based web application that provides user authentication features, including login and registration functionalities with Email verification. The project is designed to help users securely manage their accounts and reset their passwords.
 
 ## Features
 - User registration with email verification (if implemented)
@@ -12,8 +12,8 @@ ResetPassword is a Django-based web application that provides user authenticatio
 
 ## Technologies Used
 - **Backend**: Django (version 5.1.1)
-- **Frontend**: HTML, CSS (Tailwind CSS)
-- **Database**: SQLite (default for Django) or any other database of your choice
+- **Frontend**: HTML, CSS,jinga templates, javascript
+- **Database**: SQLite (default for Django)/Mysql
 - **Version Control**: Git
 
 ## Installation
